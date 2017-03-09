@@ -7,6 +7,10 @@
 	<li>
 		<%= todo.title %>
 		<%= todo.due_date %>
+		<%= link_to 'DEL', todo_path(todo), method: :delete, data:{
+				confirm: "Delete this item ?"
+			} %>
+
 
 	</li>
 	<% end %>
