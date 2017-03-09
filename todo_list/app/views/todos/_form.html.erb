@@ -1,21 +1,31 @@
-<% if @todo.errors.any? %>
-	<h2>We have some errors here !</h2>
- <ul>
-   <% @todo.errors.full_messages.each do |msg| %>
-     <li><%= msg %></li>
-   <% end %>
- </ul>
-<% end %>
+<body style="background-color: #EDF4ED">
+	<div style="width: 400px; height: 150px; margin: 20px auto; text-align: center; border: solid 1px #EDF4ED; color: red; position: ">
+		<% if @todo.errors.any? %>
+			<h2>We have some errors here !</h2>
+				<ul style="list-style: none; padding: 0;">
+			  	<% @todo.errors.full_messages.each do |msg| %>
+			  		<li><%= msg %></li>
+			  	<% end %>
+				</ul>
+			<% end %>
+	</div>
 
+	<div style="width: 400px; background-color: #f3ffbd;box-shadow: 3px 3px 8px rgba(0,0,0,.5); border: solid 2px grey; margin: 0 auto; text-align: center; padding: 20px 0;">
+		<%= form_for @todo do |f| %>
+			<%= f.label :title, "Title" %>
+			<br>
+			<%= f.text_area :title %>
+			<br>
+			<%= f.label :due_date, "Due Date" %>
+			<br>
+			<%= f.text_field :due_date %>	
+			<br>
 
-<%= form_for @todo do |f| %>
-	<%= f.label :title, "Title : " %>
-	<%= f.text_area :title %>
+			<%= f.submit %>
+			<br>
+			<%= link_to 'BACK', todos_path %>
+			<br>
 
-	<%= f.label :due_date, "Due Date : " %>
-	<%= f.text_field :due_date %>	
-
-	<%= f.submit %>
-	<%= link_to 'BACK', todos_path %>
-
-<% end %>
+		<% end %>
+	</div>
+</body>
