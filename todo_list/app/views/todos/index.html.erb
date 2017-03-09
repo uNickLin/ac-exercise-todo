@@ -2,11 +2,13 @@
 
 <%= link_to 'ADD LIST', new_todo_path %>
 
-<ul>
+<ol>
 	<% @todos.each do |todo| %>
 	<li>
+		<p>Due Date : <%= todo.due_date %></p>
 		<%= todo.title %>
-		<%= todo.due_date %>
+		
+		<%= link_to 'EDIT', edit_todo_path(todo) %>
 		<%= link_to 'DEL', todo_path(todo), method: :delete, data:{
 				confirm: "Delete this item ?"
 			} %>
@@ -14,6 +16,6 @@
 
 	</li>
 	<% end %>
-</ul>
+</ol>
 
 
