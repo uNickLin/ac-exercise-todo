@@ -54,14 +54,26 @@ li{
 
 // ===============index page===============
 
+.sticker{
+	width: 100px;
+	height: 30px;
+
+	background-color: white ;	
+	border: solid 1px #D8D8D8;
+
+	transform: rotate(-12deg);
+
+}
+
 .listbox{
 	width: 600px; 
-	max-height: 800px; 
+	max-height: 800px;
 
 	border:solid 2px grey; 
+	border-radius: 15px;
 	background-color: #F3FFBD; 
 
-	margin: 50px auto; 
+	margin: 100px auto; 
 	position: relative; 
 	box-shadow: 3px 3px 8px rgba(0,0,0,.5);
 }
