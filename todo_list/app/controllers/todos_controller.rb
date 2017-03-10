@@ -13,10 +13,10 @@ class TodosController < ApplicationController
 	def create
 		@todo = Todo.new(todo_params)
 		if @todo.save
-			redirect_to todos_path
-			
+			redirect_to todos_path   #重新發出request，會重整頁面
+
 		else
-			render :action => :new
+			render :action => :new   #保留需求不會清空資料，使用者可以繼續填寫錯誤的部分
 
 		end
 		

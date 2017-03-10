@@ -1,21 +1,20 @@
-<body style="background-color: #EDF4ED;">
-	<div style="width: 600px; max-height: 800px; border:solid 2px grey; background-color: #F3FFBD; margin: 50px auto; position: relative; box-shadow: 3px 3px 8px rgba(0,0,0,.5);">
-		<h1 style="text-align: center;">To Do List</h1>
-		<div style="background-color: red; width: 70px; height: 10px; margin: 0 auto 30px auto;"></div>
+	<div class="listbox">
+		<h1>To Do List</h1>
+		<div class="underbar"></div>
 
-		<div class="addbtn" style="position: absolute; margin: 0px 30px;">
+		<div class="addbtn">
 			<%= link_to 'ADD LIST', new_todo_path, :class => "btn btn-success" %>
 		</div>
 		
-		<div class="list" style="margin: 80px 30px; max-height: 600px; overflow: scroll;">
+		<div class="list">
 			<ol>
 				<% @todos.each do |todo| %>
-				<li style="display: inline-block; position: relative; width: 95%;">
-					<p style="font-size: 14px;">Due Date : <%= todo.due_date %></p>
-					<p style="font-weight: bold;font-size: 16px; line-height: 6px;"><%= todo.title %></p>
+				<li>
+					<p class="due_date">Due Date : <%= todo.due_date %></p>
+					<p class="title"><%= todo.title %></p>
 					
-					<div class="actions" style="right: 0;top: 7px; position: absolute;">
-						<%= link_to 'EDIT', edit_todo_path(todo), :class => "btn btn-default" %>
+					<div class="actions">
+						<%= link_to 'EDIT', edit_todo_path(todo), :class => "btn btn-primary" %>
 						<%= link_to 'DEL', todo_path(todo), :class => "btn btn-danger", method: :delete, data:{
 								confirm: "Delete this item ?"
 							} %>
@@ -29,4 +28,3 @@
 
 
 	</div>
-</body>

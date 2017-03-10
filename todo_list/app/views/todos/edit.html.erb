@@ -1,12 +1,13 @@
 <!-- # <%= form_for @todo do |f| %>
-# 	<%= f.label :title, "Title : " %>
-# 	<%= f.text_area :title %>
+#  	<%= f.label :title, "Title : " %>
+#  	<%= f.text_area :title %>
 
-# 	<%= f.label :due_date, "Due Date : " %>
-# 	<%= f.text_field :due_date %>	
+#  	<%= f.label :due_date, "Due Date : " %>
+#  	<%= f.text_field :due_date %>	
 
-# 	<%= f.submit %>
+#  	<%= f.submit %>
 
 # <% end %> -->
 
-<%= render :partial => "form" %>
+<!-- #locals 可修改不同頁面傳到partial時的按鈕文字 -->
+<%= render :partial => "form", locals: {button: 'UPDATE'} %> 

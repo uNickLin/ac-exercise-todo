@@ -1,2 +1,109 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// =============normal setting============
+
+body{
+	background-color: #EDF4ED;
+
+}
+
+h1{
+	text-align: center;
+}
+
+li{
+	display: inline-block; 
+	position: relative; 
+	width: 95%;
+}
+
+
+// ===============index page===============
+
+.listbox{
+	width: 600px; 
+	max-height: 800px; 
+
+	border:solid 2px grey; 
+	background-color: #F3FFBD; 
+
+	margin: 50px auto; 
+	position: relative; 
+	box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+}
+
+.underbar{
+	width: 70px; 
+	height: 10px; 
+
+	background-color: red; 
+
+	margin: 0 auto 30px auto;
+}
+
+.addbtn{
+	position: absolute; 
+	margin: 0px 30px;
+}
+
+.list{
+	margin: 80px 30px; 
+	max-height: 600px; 
+	overflow: scroll;
+}
+
+.due_date{
+	font-size: 14px;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 16px; 
+	line-height: 6px;
+}
+
+.actions{
+	position: absolute;
+
+	right: 0;
+	top: 7px; 
+}
+
+
+// ================partial page==============
+
+.errorbox{
+	width: 400px; 
+	height: 150px; 
+	margin: 20px auto; 
+	text-align: center; 
+	border: solid 1px #EDF4ED; 
+	color: red;
+}
+
+.errorlist{
+	list-style: none; 
+	padding: 0;
+}
+
+.itembox{
+	width: 400px; 
+	background-color: #f3ffbd;
+	box-shadow: 3px 3px 8px rgba(0,0,0,.5); 
+	border: solid 2px grey; 
+	margin: 0 auto; 
+	text-align: center; 
+	padding: 20px 0;
+}
+
+.input_text{
+	text-align:center;
+}
+
+.itembox_btn{
+	margin: 10px;
+}
+
+
