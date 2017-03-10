@@ -17,9 +17,8 @@
 			<br>
 			<%= f.label :due_date, "Due Date" %>
 			<br>
-			<div class="input_text">
-				<%= f.text_field :due_date, placeholder: "yyyy-mm-dd", :style => "text-align: center" %>	
-			</div>
+			<%=  f.date_select :due_date %>
+			
 			<br>
 
 			<div class="itembox_btn">

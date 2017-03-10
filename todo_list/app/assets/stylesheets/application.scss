@@ -1,8 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap-datepicker
+ *= require_tree .
+ *= require_self
+ */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 
 
 // =============normal setting============
+
+*{
+	// border: solid 1px black;
+	font-family: 'Gochi Hand', cursive;
+}
+
+@font-face{
+	font-family: 'Gochi Hand', cursive;
+
+}
 
 body{
 	background-color: #EDF4ED;
@@ -11,12 +39,16 @@ body{
 
 h1{
 	text-align: center;
+	font-size: 70px;
 }
 
 li{
 	display: inline-block; 
 	position: relative; 
+
 	width: 95%;
+
+	font-size: 40px;
 }
 
 
@@ -46,22 +78,24 @@ li{
 .addbtn{
 	position: absolute; 
 	margin: 0px 30px;
+	left: 40px;
 }
 
 .list{
 	margin: 80px 30px; 
-	max-height: 600px; 
+	max-height: 550px; 
 	overflow: scroll;
 }
 
 .due_date{
-	font-size: 14px;
+	font-size: 20px;
+	margin-bottom: 0;
 }
 
 .title{
 	font-weight: bold;
-	font-size: 16px; 
-	line-height: 6px;
+	font-size: 28px;
+	margin-bottom: 0;
 }
 
 .actions{
@@ -69,6 +103,13 @@ li{
 
 	right: 0;
 	top: 7px; 
+}
+
+.itembar{
+	width: 95%;
+	height: 1.5px;
+
+	background-color: #DEE5DE;
 }
 
 
@@ -96,11 +137,12 @@ li{
 	margin: 0 auto; 
 	text-align: center; 
 	padding: 20px 0;
+	font-size: 22px;
 }
 
-.input_text{
-	text-align:center;
-}
+// .input_text{
+// 	text-align:center;
+// }
 
 .itembox_btn{
 	margin: 10px;

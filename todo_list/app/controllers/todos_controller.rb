@@ -2,6 +2,7 @@ class TodosController < ApplicationController
 
 	def index
 		@todos = Todo.all
+		@todos = Todo.order(due_date: :asc)
 		
 	end
 

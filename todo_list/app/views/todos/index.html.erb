@@ -7,7 +7,7 @@
 		</div>
 		
 		<div class="list">
-			<ol>
+			<ul>
 				<% @todos.each do |todo| %>
 				<li>
 					<p class="due_date">Due Date : <%= todo.due_date %></p>
@@ -21,9 +21,9 @@
 					</div>
 
 				</li>
-				<hr>
+				<li class="itembar"></li>
 				<% end %>
-			</ol>
+			</ul>
 		</div>
 
 
