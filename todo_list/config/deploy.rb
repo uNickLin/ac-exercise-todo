@@ -2,10 +2,10 @@
 lock "3.8.0"
 
 `ssh-add` # 注意這是鍵盤左上角的「 `」不是單引號「 '」
-set :application, 'nick'
+set :application, 'todo_list'
 
 set :repo_url, 'git@github.com:uNickLin/ac-exercise-todo.git'
-set :deploy_to, '/home/nick/rails-exercise'
+set :deploy_to, '/home/nick/todo_list/'
 set :keep_releases, 5
 
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
